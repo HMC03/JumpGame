@@ -3,6 +3,6 @@ Project(JumpGame)
 
 add_executable(main main.cc)
 
-find_package(SFML REQUIRED COMPONENTS graphics window system)
+find_package(SFML 3 REQUIRED COMPONENTS Graphics Audio Network)
 
-target_link_libraries(main sfml-graphics sfml-window sfml-system)
+target_link_libraries(main PRIVATE SFML::Graphics SFML::Audio SFML::Network)
