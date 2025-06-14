@@ -1,9 +1,8 @@
 #include <SFML/Window.hpp>
 
 int main(){
-    //sf::RenderWindow window(sf::VideoMode::getFullscreenModes().at(0), "Jump Game", sf::State::Fullscreen);
-
     sf::Window window(sf::VideoMode({800, 600}), "Jump Game");
+    window.setPosition({600, 200});
 
     // run the program as long as the window is open
     while (window.isOpen())
@@ -12,28 +11,16 @@ int main(){
         while (const std::optional event = window.pollEvent())
         {
             // "close requested" event: we close the window
-            if (event->is<sf::Event::Closed>())
+            if (event->is<sf::Event::Closed>()){
                 window.close();
+            }else if (const auto* keyPressed = event->getIf<sf::Event::KeyPressed>())
+            {
+                if (keyPressed->scancode == sf::Keyboard::Scancode::Escape)
+                    window.close();
+            }
+
         }
     }
-
-    // const auto onClose = [&window](const sf::Event::Closed&)
-    // {
-    //     window.close();
-    // };
-
-    // const auto onKeyPressed = [&window](const sf::Event::KeyPressed& keyPressed)
-    // {
-    //     if (keyPressed.scancode == sf::Keyboard::Scancode::Escape)
-    //         window.close();
-    // };
-
-    // while (window.isOpen())
-    // {
-    //     window.handleEvents(onClose, onKeyPressed);
-
-    //     // Remainder of main loop
-    // }
     
     return 0;
 }

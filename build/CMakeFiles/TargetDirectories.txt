@@ -1,3 +1,0 @@
-/home/hayden/personal/JumpGame/build/CMakeFiles/main.dir
-/home/hayden/personal/JumpGame/build/CMakeFiles/edit_cache.dir
-/home/hayden/personal/JumpGame/build/CMakeFiles/rebuild_cache.dir

@@ -1,1 +1,0 @@
-/usr/lib/ccache/c++ CMakeFiles/main.dir/main.cc.o -o main  -Wl,-rpath,/usr/local/lib /usr/local/lib/libsfml-graphics.so.3.0.1 /usr/local/lib/libsfml-audio.so.3.0.1 /usr/local/lib/libsfml-network.so.3.0.1 /usr/local/lib/libsfml-window.so.3.0.1 /usr/local/lib/libsfml-system.so.3.0.1 
